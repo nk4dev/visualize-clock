@@ -1,0 +1,20 @@
+[package]
+name = "sound-clock-widget"
+version = "0.1.0"
+edition = "2021"
+description = "Lightweight desktop clock widget with audio visualizer for Ubuntu"
+
+[dependencies]
+winit = "0.30"
+softbuffer = "0.4"
+rustfft = "6.4"
+ab_glyph = "0.2"
+chrono = "0.4"
+num-complex = "0.4"
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
